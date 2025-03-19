@@ -1,6 +1,6 @@
 /* Apply a background image to the entire body of the document. */
 body {
-  background-image: url("./concrete.jpg"); /* The image used as a background. */
+  background-image: url("./grass.jpg"); /* The image used as a background. */
   background-repeat: no-repeat; /* The background image will not repeat. */
   background-attachment: fixed; /* The background image will not scroll with the page. */
   background-size: cover; /* The background image will cover the entire area of the element. */
@@ -71,6 +71,7 @@ body {
 }
 
 h1 {
+  color: white;
   text-align: center;
   font-size: 30px;
 }

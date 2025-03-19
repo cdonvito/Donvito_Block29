@@ -1,8 +1,7 @@
-// Import the React library
 import React from "react";
 
 // Import the generated hook from our RTK Query API slice
-import { usePlayersQuery } from "../api/puppyBowlApi";
+import { usePlayersQuery } from "../api/api_AllPlayers";
 // Define a new React component
 const Players = () => {
   // Use the generated hook to fetch data from the API
@@ -59,6 +58,14 @@ const Players = () => {
                 player.status
               }
             </p>
+
+            <button>
+              See Details
+            </button>
+
+            <button>
+              Delete
+            </button>
           </div>
         </div>
       ))}

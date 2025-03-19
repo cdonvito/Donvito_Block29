@@ -1,7 +1,7 @@
-// Import the React library, which allows us to define components
-// Import the Players component, which we'll use to show a list of players
 import React from "react";
 import Players from "./components/Players";
+import CreatePlayerForm from "./components/CreatePlayerForm";
+import SearchBar from "./components/SearchBar";
 
 // Define the App component
 function App() {
@@ -10,6 +10,8 @@ function App() {
   return (
     <section>
       <h1>Puppy Players</h1>
+      < CreatePlayerForm />
+      < SearchBar />
       <div className="App">
         <Players />
       </div>
