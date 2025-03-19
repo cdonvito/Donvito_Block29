@@ -1,6 +1,12 @@
 function SearchBar () {
   return (
-    <p>Search Bar</p>
+    <label>
+      Search: 
+      <input
+      type="text"
+      placeholder="Search Puppies"
+      ></input>
+    </label>
   );
 };
 
