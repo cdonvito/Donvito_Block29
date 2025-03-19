@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // Import the API service we defined (which includes the API endpoints and the reducer)
-import { puppyBowlApi } from "../api/api_AllPlayers";
+import { puppyBowlApi } from "../api/puppyBowlApi";
 
 // Create a Redux store
 const store = configureStore({

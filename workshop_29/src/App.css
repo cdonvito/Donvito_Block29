@@ -112,3 +112,7 @@ input, select {
   padding: 8px;
   font-size: 14px;
 }
+
+button:hover {
+  background-color: aqua;
+}

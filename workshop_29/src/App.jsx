@@ -1,7 +1,8 @@
 import React from "react";
 import Players from "./components/Players";
 import CreatePlayerForm from "./components/CreatePlayerForm";
-import SearchBar from "./components/SearchBar";
+import { Route, Routes } from "react-router-dom";
+import PlayerDetail from "./components/PlayerDetail";
 
 // Define the App component
 function App() {
@@ -10,11 +11,11 @@ function App() {
   return (
     <section>
       <h1>Puppy Players</h1>
-      < CreatePlayerForm />
-      < SearchBar />
-      <div className="App">
-        <Players />
-      </div>
+      <CreatePlayerForm />
+      <Routes>
+        <Route path="/:playerId" element={<PlayerDetail />} />
+        <Route path="/" element={<Players />} />
+      </Routes>
     </section>
   );
 }

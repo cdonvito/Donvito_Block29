@@ -4,17 +4,17 @@ function CreatePlayerForm() {
       <div id="CreateNewPlayer">
         <h2>Invite a New Puppy Player!</h2>
 
-        <label for="name">
+        <label htmlFor="name">
           Name:
           <input type="text" name="name" placeholder="Name"></input>
         </label>
 
-        <label for="breed">
+        <label htmlFor="breed">
           Breed:
           <input type="text" name="breed" placeholder="Breed"></input>
         </label>
 
-        <label for="status">
+        <label htmlFor="status">
           Status:
           <select name="status" placeholder="bench">
             <option value="bench">Bench</option>
@@ -22,12 +22,12 @@ function CreatePlayerForm() {
           </select>
         </label>
 
-        <label for="imageUrl">
+        <label htmlFor="imageUrl">
           Image URL:
           <input type="url" name="imageUrl" placeholder="Image URL"></input>
         </label>
 
-        <label for="teamID">
+        <label htmlFor="teamID">
           Team ID:
           <input type="text" name="teamID" placeholder="Team ID"></input>
         </label>

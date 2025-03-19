@@ -1,13 +1,14 @@
-function SearchBar () {
+function SearchBar(props) {
   return (
-    <label>
-      Search: 
-      <input
-      type="text"
-      placeholder="Search Puppies"
-      ></input>
-    </label>
+    <section>
+      <label htmlFor="searchBar">
+        Search:
+        <input type="text" placeholder="Search Puppies"
+        onChange={(event) => props.setSearchParameter(event.target.value)}
+        ></input>
+      </label>
+    </section>
   );
-};
+}
 
 export default SearchBar;
