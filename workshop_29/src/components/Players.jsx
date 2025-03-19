@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { usePlayersQuery } from "../api/puppyBowlApi";
+import { useDeletePlayerMutation, usePlayersQuery } from "../api/puppyBowlApi";
 import SearchBar from "./SearchBar";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const Players = () => {
   const { data = {}, error, isLoading } = usePlayersQuery();
   const [searchParameter, setSearchParameter] = useState("");
   const navigate = useNavigate();
+  const [deletePlayer] = useDeletePlayerMutation();
 
   // Show a loading message while data is being fetched
   if (isLoading) {
@@ -41,6 +42,14 @@ const Players = () => {
             player.breed.toUpperCase().includes(searchParameter.toUpperCase())
         )
       : data.data.players;
+
+  const handleDelete = async (playerId) => {
+    try{
+      await deletePlayer(playerId).unwrap();
+    } catch (error) {
+      console.log("Error while deleting player: ", error);
+    }
+  };
 
   // Show the fetched data after it has arrived
   return (
@@ -87,7 +96,7 @@ const Players = () => {
                 See Details
               </button>
 
-              <button>Delete</button>
+              <button onClick={() => handleDelete(player.id)}>Delete</button>
             </div>
           </div>
         ))}
