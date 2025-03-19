@@ -25,7 +25,7 @@ body {
   /* The shadow effect around the card. */
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
   transition: transform 0.3s; /* Transition effect for the transform property. */
@@ -33,10 +33,12 @@ body {
 
 /* Styling for when a user hovers over a player card. */
 .player-card:hover {
-  transform: translateY(
-    -5px
-  );
-  background-color: rgb(172, 185, 185); /* The card moves up 5 pixels when hovered over. */
+  transform: translateY(-5px);
+  background-color: rgb(
+    172,
+    185,
+    185
+  ); /* The card moves up 5 pixels when hovered over. */
 }
 
 /* Styling for the container that holds the player's image. */
@@ -88,7 +90,8 @@ button {
   border-radius: 5px;
 }
 
-input, select {
+input,
+select {
   border: 1px solid black;
   border-radius: 5px;
   width: 100%;
@@ -106,7 +109,7 @@ input, select {
   width: 100%;
 }
 
-#CreateNewPlayer input, 
+#CreateNewPlayer input,
 #CreateNewPlayer select {
   width: 100%;
   padding: 8px;

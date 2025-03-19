@@ -44,7 +44,7 @@ const Players = () => {
       : data.data.players;
 
   const handleDelete = async (playerId) => {
-    try{
+    try {
       await deletePlayer(playerId).unwrap();
     } catch (error) {
       console.log("Error while deleting player: ", error);
