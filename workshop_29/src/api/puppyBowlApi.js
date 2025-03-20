@@ -26,19 +26,25 @@ export const puppyBowlApi = createApi({
     deletePlayer: builder.mutation({
       query: (playerId) => ({
         url: `/players/${playerId}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: [{type: 'Players'}],
+      invalidatesTags: [{ type: "Players" }],
     }),
     createPlayer: builder.mutation({
-      query: (playerId) => ({
+      query: (playerData) => ({
         url: `/players`,
-        method: 'POST',
+        method: "POST",
+        body: playerData,
       }),
-      invalidatesTags: [{type: 'Players'}],
+      invalidatesTags: [{ type: "Players" }],
     }),
   }),
 });
 
 // Export hooks for each endpoint - in this case, a React hook that triggers the fetchPlayers query
-export const { usePlayersQuery, usePlayerByIdQuery, useDeletePlayerMutation, useCreatePlayerMutation } = puppyBowlApi;
+export const {
+  usePlayersQuery,
+  usePlayerByIdQuery,
+  useDeletePlayerMutation,
+  useCreatePlayerMutation,
+} = puppyBowlApi;

@@ -1,6 +1,6 @@
 function SearchBar(props) {
   return (
-    <section>
+    <section id="searchBar">
       <label htmlFor="searchBar">
         Search:
         <input

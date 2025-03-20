@@ -71,32 +71,16 @@ const Players = () => {
             />
 
             <div className="player-details">
-              <h2>
-                {
-                  /* Display the player's name */
-                  player.name
-                }
-              </h2>
+              <h2>{player.name}</h2>
 
-              <p>
-                {
-                  /* Display the player's breed */
-                  player.breed
-                }
-              </p>
+              <p>{player.breed}</p>
+              <div>
+                <button onClick={() => navigate(`/${player.id}`)}>
+                  See Details
+                </button>
 
-              <p>
-                {
-                  /* Display the player's status */
-                  player.status
-                }
-              </p>
-
-              <button onClick={() => navigate(`/${player.id}`)}>
-                See Details
-              </button>
-
-              <button onClick={() => handleDelete(player.id)}>Delete</button>
+                <button onClick={() => handleDelete(player.id)}>Delete</button>
+              </div>
             </div>
           </div>
         ))}
@@ -104,7 +88,5 @@ const Players = () => {
     </section>
   );
 };
-
-// Export the component so it can be imported and used in other files
 
 export default Players;
